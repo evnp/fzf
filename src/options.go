@@ -229,6 +229,7 @@ type Options struct {
 	BorderShape tui.BorderShape
 	Unicode     bool
 	Tabstop     int
+	SkipBlank   bool
 	ClearOnExit bool
 	Version     bool
 }

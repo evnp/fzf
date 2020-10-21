@@ -157,6 +157,7 @@ type Terminal struct {
 	prevLines    []itemLine
 	suppress     bool
 	sigstop      bool
+	skipBlank    bool
 	startChan    chan bool
 	killChan     chan int
 	slab         *util.Slab
@@ -529,6 +530,7 @@ func NewTerminal(opts *Options, eventBox *util.EventBox) *Terminal {
 		mutex:       sync.Mutex{},
 		suppress:    true,
 		sigstop:     false,
+		skipBlank:   opts.SkipBlank,
 		slab:        util.MakeSlab(slab16Size, slab32Size),
 		theme:       opts.Theme,
 		startChan:   make(chan bool, 1),
@@ -1003,7 +1005,7 @@ func (t *Terminal) printInfo() {
 			t.window.CPrint(tui.ColPrompt, " < ")
 		}
 		pos += len(" < ")
-  }
+	}
 
 	switch t.infoStyle {
 	case infoHidden, infoSpinner:
@@ -2472,9 +2474,15 @@ func (t *Terminal) Loop() {
 			case actDown:
 				t.vmove(-1, true)
 				req(reqList)
+				if t.skipBlank && t.currentItem().TrimLength() == 0 {
+					doAction(action{t: actDown}, mapkey)
+				}
 			case actUp:
 				t.vmove(1, true)
 				req(reqList)
+				if t.skipBlank && t.currentItem().TrimLength() == 0 {
+					doAction(action{t: actUp}, mapkey)
+				}
 			case actAccept:
 				req(reqClose)
 			case actAcceptNonEmpty:
