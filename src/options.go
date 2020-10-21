@@ -859,6 +859,8 @@ func parseKeymap(keymap map[tui.Event][]action, str string) {
 				appendAction(actAccept)
 			case "accept-non-empty":
 				appendAction(actAcceptNonEmpty)
+			case "accept-if-no-query":
+				appendAction(actAcceptIfNoQuery)
 			case "print-query":
 				appendAction(actPrintQuery)
 			case "refresh-preview":
