@@ -157,6 +157,7 @@ type infoStyle int
 const (
 	infoDefault infoStyle = iota
 	infoInline
+	infoSpinner
 	infoHidden
 )
 
@@ -1113,6 +1114,8 @@ func parseInfoStyle(str string) infoStyle {
 		return infoDefault
 	case "inline":
 		return infoInline
+	case "spinner":
+		return infoSpinner
 	case "hidden":
 		return infoHidden
 	default:

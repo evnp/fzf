@@ -982,7 +982,7 @@ func (t *Terminal) trimMessage(message string, maxWidth int) string {
 func (t *Terminal) printInfo() {
 	pos := 0
 	switch t.infoStyle {
-	case infoDefault:
+	case infoDefault, infoSpinner:
 		t.move(1, 0, true)
 		if t.reading {
 			duration := int64(spinnerDuration)
@@ -1003,7 +1003,10 @@ func (t *Terminal) printInfo() {
 			t.window.CPrint(tui.ColPrompt, " < ")
 		}
 		pos += len(" < ")
-	case infoHidden:
+  }
+
+	switch t.infoStyle {
+	case infoHidden, infoSpinner:
 		return
 	}
 
