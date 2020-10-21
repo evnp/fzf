@@ -485,7 +485,7 @@ func NewTerminal(opts *Options, eventBox *util.EventBox) *Terminal {
 		wordRubout:  wordRubout,
 		wordNext:    wordNext,
 		cx:          len(input),
-		cy:          0,
+		cy:          opts.SelectNth,
 		offset:      0,
 		xoffset:     0,
 		yanked:      []rune{},

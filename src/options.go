@@ -208,6 +208,7 @@ type Options struct {
 	Pointer     string
 	Marker      string
 	Query       string
+	SelectNth   int
 	Select1     bool
 	Exit0       bool
 	Filter      *string
@@ -1264,6 +1265,8 @@ func parseOptions(opts *Options, allArgs []string) {
 			opts.Fuzzy = true
 		case "-q", "--query":
 			opts.Query = nextString(allArgs, &i, "query string required")
+		case "--select-nth":
+			opts.SelectNth = nextInt(allArgs, &i, "selected item index required")
 		case "-f", "--filter":
 			filter := nextString(allArgs, &i, "query string required")
 			opts.Filter = &filter
@@ -1466,11 +1469,17 @@ func parseOptions(opts *Options, allArgs []string) {
 			opts.ClearOnExit = false
 		case "--version":
 			opts.Version = true
+		case "--skip-blank":
+			opts.SkipBlank = true
+		case "--no-skip-blank":
+			opts.SkipBlank = false
 		default:
 			if match, value := optString(arg, "--algo="); match {
 				opts.FuzzyAlgo = parseAlgo(value)
 			} else if match, value := optString(arg, "-q", "--query="); match {
 				opts.Query = value
+			} else if match, value := optString(arg, "--select-nth="); match {
+				opts.SelectNth = atoi(value)
 			} else if match, value := optString(arg, "-f", "--filter="); match {
 				opts.Filter = &value
 			} else if match, value := optString(arg, "-d", "--delimiter="); match {
