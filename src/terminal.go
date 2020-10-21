@@ -260,6 +260,7 @@ const (
 	actPrintQuery
 	actRefreshPreview
 	actReplaceQuery
+	actSetQuery
 	actToggleSort
 	actTogglePreview
 	actTogglePreviewWrap
@@ -2359,6 +2360,9 @@ func (t *Terminal) Loop() {
 					t.input = current.text.ToRunes()
 					t.cx = len(t.input)
 				}
+			case actSetQuery:
+				t.input = []rune(a.a)
+				t.cx = len(t.input)
 			case actAbort:
 				req(reqQuit)
 			case actDeleteChar:
