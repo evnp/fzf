@@ -1,11 +1,11 @@
-package fzf
+package fzfx
 
 import (
 	"math"
 	"os"
 	"time"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 const (

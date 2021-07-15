@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"fmt"
@@ -8,8 +8,8 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/junegunn/fzf/src/algo"
-	"github.com/junegunn/fzf/src/tui"
+	"github.com/evnp/fzfx/src/algo"
+	"github.com/evnp/fzfx/src/tui"
 
 	"github.com/mattn/go-runewidth"
 	"github.com/mattn/go-shellwords"

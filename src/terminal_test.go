@@ -1,10 +1,10 @@
-package fzf
+package fzfx
 
 import (
 	"regexp"
 	"testing"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 func newItem(str string) *Item {

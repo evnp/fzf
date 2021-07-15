@@ -1,12 +1,12 @@
-package fzf
+package fzfx
 
 import (
 	"fmt"
 	"regexp"
 	"strings"
 
-	"github.com/junegunn/fzf/src/algo"
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/algo"
+	"github.com/evnp/fzfx/src/util"
 )
 
 // fuzzy

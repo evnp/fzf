@@ -1,6 +1,6 @@
 // +build !386,!amd64
 
-package fzf
+package fzfx
 
 func compareRanks(irank Result, jrank Result, tac bool) bool {
 	for idx := 3; idx >= 0; idx-- {

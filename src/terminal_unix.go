@@ -1,6 +1,6 @@
 // +build !windows
 
-package fzf
+package fzfx
 
 import (
 	"os"

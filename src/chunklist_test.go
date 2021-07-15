@@ -1,10 +1,10 @@
-package fzf
+package fzfx
 
 import (
 	"fmt"
 	"testing"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 func TestChunkList(t *testing.T) {

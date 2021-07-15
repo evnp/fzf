@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"github.com/junegunn/fzf/src/tui"
+	"github.com/evnp/fzfx/src/tui"
 )
 
 // The following regular expression will include not all but most of the

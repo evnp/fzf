@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"bytes"
@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 const rangeEllipsis = 0

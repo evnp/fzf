@@ -1,7 +1,7 @@
-package fzf
+package fzfx
 
 import (
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 // Item represents each input line. 56 bytes.

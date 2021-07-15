@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 func assert(t *testing.T, cond bool, msg ...string) {

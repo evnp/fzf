@@ -1,10 +1,10 @@
-package fzf
+package fzfx
 
 import (
 	"testing"
 	"time"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 func TestReadFromCommand(t *testing.T) {

@@ -1,11 +1,11 @@
-package fzf
+package fzfx
 
 import (
 	"strconv"
 	"strings"
 	"unicode/utf8"
 
-	"github.com/junegunn/fzf/src/tui"
+	"github.com/evnp/fzfx/src/tui"
 )
 
 type ansiOffset struct {

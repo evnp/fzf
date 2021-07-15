@@ -1,9 +1,9 @@
-package fzf
+package fzfx
 
 import (
 	"testing"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 func TestStringPtr(t *testing.T) {

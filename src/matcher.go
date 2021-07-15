@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"fmt"
@@ -7,7 +7,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 )
 
 // MatchRequest represents a search request

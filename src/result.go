@@ -1,12 +1,12 @@
-package fzf
+package fzfx
 
 import (
 	"math"
 	"sort"
 	"unicode"
 
-	"github.com/junegunn/fzf/src/tui"
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/tui"
+	"github.com/evnp/fzfx/src/util"
 )
 
 // Offset holds two 32-bit integers denoting the offsets of a matched substring

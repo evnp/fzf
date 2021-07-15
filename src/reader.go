@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"bufio"
@@ -11,7 +11,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/util"
 	"github.com/saracen/walker"
 )
 

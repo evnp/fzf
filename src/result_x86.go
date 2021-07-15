@@ -1,6 +1,6 @@
 // +build 386 amd64
 
-package fzf
+package fzfx
 
 import "unsafe"
 

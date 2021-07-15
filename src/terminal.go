@@ -1,4 +1,4 @@
-package fzf
+package fzfx
 
 import (
 	"bufio"
@@ -17,8 +17,8 @@ import (
 	"github.com/mattn/go-runewidth"
 	"github.com/rivo/uniseg"
 
-	"github.com/junegunn/fzf/src/tui"
-	"github.com/junegunn/fzf/src/util"
+	"github.com/evnp/fzfx/src/tui"
+	"github.com/evnp/fzfx/src/util"
 )
 
 // import "github.com/pkg/profile"
